@@ -1,0 +1,41 @@
+<view class='sku-container'>
+  <view class='sku-item' wx:if="{{articleListData.length != 0}}" wx:for="{{articleListData}}" wx:key="index">
+    <view class='sku-item-logo'>
+      <image data-url="{{item.avatar_url}}" bindtap="showBigAvatar" wx:if="{{item.avatar_url}}" class='sku-item-img' src='{{item.avatar_url}}'></image>
+      <image wx:else class='sku-item-img' src='../../pages/images/logo.jpg'></image>
+    </view>
+    <view class='sku-item-info'>
+      <view class='sku-item-name' wx:if="{{item.nick_name}}" data-id="{{item.id}}" bindtap='goDetails'>{{item.nick_name}}</view>
+      <view wx:else class='sku-item-name' data-id="{{item.id}}" bindtap='goDetails'>{{item.title}}</view>
+      <view class='sku-item-content' data-id="{{item.id}}" bindtap='goDetails'>
+        {{item.description}}
+      </view>
+      <view class='sku-item-img'>
+        <image src='{{item.img_src1}}' mode="aspectFill" data-srcthree="{{item.img_src3}}" data-srctwo="{{item.img_src2}}" data-srcone="{{item.img_src1}}" data-index="0" bindtap='showBigImg'></image>
+        <image src='{{item.img_src2}}' mode="aspectFill" data-srcthree="{{item.img_src3}}" data-srctwo="{{item.img_src2}}" data-srcone="{{item.img_src1}}" data-index="1"  bindtap='showBigImg'></image>
+        <image src='{{item.img_src3}}' mode="aspectFill" data-srcthree="{{item.img_src3}}" data-srctwo="{{item.img_src2}}" data-srcone="{{item.img_src1}}" data-index="2"  bindtap='showBigImg'></image>
+      </view>
+      <view class='sku-bottom'>
+        <view class='time' wx:if="{{item.level!=4}}" data-id="{{item.id}}" bindtap='goDetails'>
+          <image src='../../pages/images/time.jpg'></image>
+          <text>{{item.publish_time}}</text>
+        </view>
+        <view class='browse' wx:if="{{item.level!=4}}" data-id="{{item.id}}" bindtap='goDetails'>
+          <image src='../../pages/images/browse.jpg'></image>
+          <text>{{item.look_times}}</text>
+        </view>
+        <view class='browse pl' data-id="{{item.id}}" bindtap='goDetails'>
+          <image src='../../pages/images/xx.jpg'></image>
+          <text>{{item.comment_count}}条评论</text>
+        </view>
+        <view class='browse phone' data-title="{{item.description}}" bindtap='callPhone'>
+          <image src='../../pages/images/dh.jpg'></image>
+          <text>拨打电话</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='no-data' wx:if="{{articleListData.length == 0}}">
+    暂无数据
+  </view> -->
+</view>

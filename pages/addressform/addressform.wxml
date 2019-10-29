@@ -1,0 +1,30 @@
+<!--pages/addressform/addressform.wxml-->
+<view>
+  <demo-block title="姓名">
+    <van-cell-group>
+      <van-field value="{{ name }}" placeholder="请输入你名字" border="{{ false }}" bind:input="bindName" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="电话号码">
+    <van-cell-group>
+      <van-field value="{{ phone }}" placeholder="请输入你的电话号码" border="{{ false }}" bind:input="bindPhone" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="详细地址">
+    <textarea class='demand' maxlength="1000" value="{{ addressDetails }}" bindinput="bindAddressDetails" placeholder="请填写详细地址" placeholder-style="color:#888;"  />
+  </demo-block>
+  <demo-block class="default" title="">
+  <text>设置为默认地址</text>
+  <van-switch
+    class='check-btn'
+    checked="{{ checked }}"
+    bind:change="onChange"
+  />
+  </demo-block>
+  <view class='save-box'>
+    <view class='save' bindtap='bindaddAddr'>
+      保存
+    </view>
+  </view>
+  
+</view>

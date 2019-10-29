@@ -1,0 +1,97 @@
+/* pages/orderlist/orderlist.wxss */
+page {
+  background-color: #eee;
+}
+.order-container {
+  padding: 20rpx;
+}
+.list .item {
+  background-color: #fff;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.list .item .img {
+  width: 100rpx;
+  height: 100rx;
+}
+.list .item .img image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.list .item .info {
+  width: 550rpx;
+}
+.shop-name {
+  padding-bottom: 10rpx;
+  color: #444;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.goods-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.goods-item view:nth-child(1),.goods-item view:nth-child(2) {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 32rpx;
+}
+.goods-item view:nth-child(1) image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.goods-item .sl {
+  margin-right: 10rpx;
+}
+.goods-item .price {
+  color: red !important;
+}
+.bottom-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.bottom-row view {
+  color: #666;
+  border: 1px solid #dfdfdf;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  padding: 6rpx 10rpx;
+  margin-top: 15rpx;
+}
+.bottom-row view:nth-child(2) {
+  margin-left: 20rpx;
+}
+.total-price {
+  text-align: right;
+  color: #666;
+  font-size: 32rx;
+}
+.total-price text {
+  color: red;
+}
+.no-order {
+  text-align: center;
+  font-size: 34rpx;
+  color: #888;
+  margin-top: 45%;
+}
+.tip {
+  text-align: right;
+  font-size: 32rpx;
+  padding: 10rpx 0;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}

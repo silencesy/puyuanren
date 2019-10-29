@@ -1,0 +1,30 @@
+.img-box {
+  text-align: center;
+  margin-top: 80rpx;
+}
+.img-box image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.title {
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #111;
+}
+.info {
+  font-size: 32rpx;
+  color: #aaa;
+  padding: 20rpx 40rpx;
+  text-align: center;
+}
+.btn-box {
+  padding: 20rpx 80rpx;
+}
+.btn {
+  width: 100%;
+  font-size: 32rpx;
+  background-color: #11b90c;
+  color: #fff;
+}

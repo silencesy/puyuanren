@@ -1,0 +1,39 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class='order-container' wx:if="{{data}}">
+  <view class='list' wx:if="{{data.length>0}}">
+    <view class='item' wx:for="{{data}}" wx:key="{{index}}">
+      <view class='img'>
+       <image src='{{item.shop_img_src}}'></image>
+      </view>
+      <view class='info'>
+        <view class='shop-name'>{{item.shop_name}}</view>
+        <view class='goods-list'>
+          <view class='goods-item' wx:for="{{item.goods_list}}" wx:key="{{index}}">
+            <view>
+              <image src='{{item.img_src}}'></image>
+              <view>{{item.goods_name}}</view>
+            </view>
+            <view>
+              <view class='sl'>x{{item.sl}}</view>
+              <view class='price'>￥{{item.sl*item.price}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='total-price'>实付：￥<text>{{item.payment}}</text></view>
+        <view class='tip'>
+          <view>订单将在45分钟送达。</view>
+          <view wx:if="{{item.shipping_status==0 || item.shipping_status==1}}">运输中</view>
+          <view wx:if="{{item.shipping_status==2}}">已到货</view>
+        </view>
+        <view class='bottom-row'>
+          <view wx:if="{{item.shipping_status==0 || item.shipping_status==1}}" data-id='{{item.id}}' bindtap='bindConfirm'>确认收货</view>
+          <view data-id='{{item.id}}' bindtap='payAgain'>再来一单</view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class='no-order'>暂无订单数据</view>
+  </view>
+</view>

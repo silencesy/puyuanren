@@ -1,0 +1,97 @@
+/* 评论行 */
+.pl {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1rpx solid #dfdfdf;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.pl text {
+  font-size: 30rpx;
+  color: #999; 
+}
+.pl image {
+  width:40rpx;
+  height: 40rpx;
+}
+
+/* 评论区域 */
+.comment-container {
+  padding: 20rpx;
+}
+.comment-item {
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.comment-item image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  float: left;
+}
+.comment-item .comment-content {
+  float: left;
+  box-sizing: border-box;
+  display: block;
+  white-space: pre-wrap;
+  width: 630rpx;
+  padding-left: 20rpx;
+}
+.comment-item .comment-content .name {
+  color: #444;
+  font-size: 32rpx;
+}
+.comment-item .comment-content .content {
+  display: block;
+  word-break:break-all;
+  color: #666;
+  font-size: 28rpx;
+  padding: 4rpx 0;
+}
+.comment-item .comment-content .time {
+  color: #666;
+  font-size: 26rpx;
+  padding: 4rpx 0;
+}
+/* 评论输入框 */
+.comment {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 80rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-top: 1px solid #dfdfdf;
+}
+.no-comment {
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 60rpx;
+}
+
+.comment input {
+  width: 600rpx;
+  height: 100%;
+  background-color: #eee;
+  font-size: 32rpx;
+  padding-left: 30rpx;
+  border-radius: 40rpx;
+}
+.comment text {
+  font-size: 32rpx;
+  color: #666;
+  padding-top: 8rpx;
+}
+.layer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.45);
+}

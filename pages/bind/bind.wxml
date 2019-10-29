@@ -1,0 +1,14 @@
+<view>
+  <view class='img-box'>
+   <image src='../images/logo2.jpg'></image>
+  </view>
+  <view class='title'>
+    - 用户授权提醒 -
+  </view>
+  <view class='info'>
+    亲，请您给我们权限更好的为您服务吧！
+  </view>
+  <view class='btn-box'>
+    <button class='btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">同意</button>
+  </view>
+</view>

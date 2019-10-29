@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "article-item": "../../components/article_item/article_item",
+    "i-drawer": "../../iview/drawer/index",
+    "i-icon": "../../iview/icon/index"
+  }
+}

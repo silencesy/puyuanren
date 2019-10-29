@@ -1,0 +1,83 @@
+<!--pages/deliverhome/deliverhome.wxml-->
+<view class='deliverhome-container'>
+  <view class='left'>
+    <scroll-view
+      scroll-y
+      class='left-scroll'
+    >
+      <view wx:for="{{data}}" class='{{item.cate_id==activeId?"active":""}}' wx:key="{{index}}" data-id='{{item.cate_id}}' bindtap='tapClassify'>
+        <text>{{item.cate_name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='right'>
+    <scroll-view
+      scroll-y="true"
+      class='right-scroll'
+      scroll-into-view="{{classifyViewed}}"
+      bindscroll="onGoodsScroll"
+    >
+      <view wx:for="{{data}}" wx:key="{{index}}" id="{{item.cate_id}}">
+        <view class="class-title">{{item.cate_name}}</view>
+        <view class='goods-item' wx:for="{{item.goods_list}}" wx:key="{{index}}">
+          <image src='{{item.img_src}}'></image>
+          <view class='goods-info'>
+            <view class='name'>{{item.goods_name}}</view>
+            <view class='descript'>{{item.description}}</view>
+            <view class='price-count'>
+              <view class='price'>￥{{item.price}}</view>
+              <view class='count'>
+                <van-stepper
+                  value="{{ item.sl }}"
+                  integer
+                  min="0"
+                  step="1"
+                  data-id="{{item.id}}"
+                  data-index="{{index}}"
+                  bind:change="onChange"
+                />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    
+  </view>
+  <view class='choose'>
+    <view bindtap='showChooseGoods'>
+      <view class='number'>
+        <image src='../images/cart.png'></image>选中{{checkedGoodsNumber}}件商品
+      </view>
+      <view class='totalPrice'>总价 <text>￥{{totalPrice}}</text> </view>
+    </view>
+    <view class='price-buy'>
+      <!-- <view>总价{{totalPrice}}</view> -->
+      <view bindtap='goPage'>购买</view>
+    </view>
+  </view>
+  <view class='layer-box' bindtap='hidelayer' wx:if="{{showLayer}}"></view>
+  <view class='choose-goods-list' wx:if="{{showLayer}}">
+    <view class='title'>
+      <view>购物车</view>
+    </view>
+    <scroll-view class='goods-list-scroll' scroll-y>
+      <view class='item'  wx:for="{{chooseData}}" wx:key="{{index}}">
+        <view class='name'>{{item.goods_name}}</view>
+        <view class='count-price'>
+          <view class='price'>￥{{item.price*item.sl}}</view>
+          <van-stepper
+            value="{{item.sl}}"
+            integer
+            min="0"
+            step="1"
+            data-flag="{{true}}"
+            data-id="{{item.id}}"
+            data-index="{{index}}"
+            bind:change="onChange"
+          />
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

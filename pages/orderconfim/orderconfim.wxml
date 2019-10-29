@@ -1,0 +1,37 @@
+<!--pages/orderconfim/orderconfim.wxml-->
+<view class='orderconfim-container' wx:if="{{data}}">
+  <view class='addr' wx:if="{{addrData.length>0}}" bindtap='bindChooseAddress'>
+    <view class='left'>
+      <view>
+        <view class='addr-text'>{{addrData[0].address}}</view>
+        <view class='user-info'>
+          {{addrData[0].contact}} {{addrData[0].mobile}}
+        </view>
+      </view>
+    </view>
+    <view class='right'>
+      <image src='../images/xy.png'></image>
+    </view>
+  </view>
+  <view class='addr' wx:if="{{addrData.length==0}}" bindtap='bindAddress'>
+    <view class='left'>
+      <view class='add-adress'>
+        请添加地址
+      </view>
+    </view>
+    <view class='right'>
+      <image src='../images/xy.png'></image>
+    </view>
+  </view>
+  <view class='goods-container'>
+    <image wx:for="{{data.goods_list}}" wx:key="{{index}}" src='{{item.img_src}}'></image>
+  </view>
+  <view class='postage-container'>
+    <view>快递费用</view>
+    <view class='delivery-amount'>￥{{data.delivery_amount}}</view>
+  </view>
+  <view class='bottom-row'>
+    <view>￥{{data.total_amount}}</view>
+    <view bindtap='bindBuyNow'>提交订单</view>
+  </view>
+</view>

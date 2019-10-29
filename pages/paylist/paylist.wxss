@@ -1,0 +1,54 @@
+/* pages/paylist/paylist.wxss */
+page {
+  background-color: #eee;
+}
+.pay-title {
+  width: 430rpx;
+  margin: 0 auto;
+  font-size: 40rpx;
+  text-align: center;
+  padding: 40rpx 0;
+  line-height: 60rpx;
+  color: #444;
+}
+.item {
+  box-sizing: border-box;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+}
+.item .title{
+  display: flex;
+  padding-bottom: 20rpx;
+}
+.item .title view {
+  flex: 1;
+}
+.item .title view:nth-child(1) {
+  text-align: left;
+  font-size: 32rpx;
+  color: #444;
+}
+.item .title view:nth-child(2) {
+  text-align: right;
+  font-size: 32rpx;
+  color: #e32561;
+}
+.item .content{
+  display: flex;
+}
+.item .content view {
+  flex: 1;
+  font-size: 28rpx;
+  color: #666;
+}
+.item .content view {
+  text-align: left;
+}
+.item .content button {
+  border: none;
+  font-size: 28rpx;
+  background-color: #ff6000;
+  color: #fff;
+}

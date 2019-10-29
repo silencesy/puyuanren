@@ -1,0 +1,10 @@
+<!--pages/browse/browse.wxml-->
+<view wx:if="{{totalPage!=-1}}">
+  <view wx:if="{{articleListData.length>0}}">
+    <article-item articleListData='{{articleListData}}'></article-item>
+  </view>
+  <view class='no-data' wx:if="{{articleListData.length==0}}">
+    没有搜索结果
+  </view>
+</view>
+

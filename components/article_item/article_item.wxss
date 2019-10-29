@@ -1,0 +1,96 @@
+/* sku列表 */
+
+.sku-item {
+  display: flex;
+  border-bottom: 1rpx solid #dfdfdf;
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+.sku-item:last-child {
+  border-bottom: none;
+}
+.sku-item .sku-item-logo {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 10rpx;
+}
+
+.sku-item .sku-item-logo image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8px;
+}
+.sku-item .sku-item-info {
+  box-sizing: content-box;
+  width: 620rpx;
+  padding-left: 10rpx;
+}
+
+.sku-item .sku-item-info .sku-item-name {
+  font-size: 32rpx;
+  color: #333;
+}
+.sku-item .sku-item-info .sku-item-content {
+  padding: 10rpx 0 20rpx 0;
+  font-size: 28rpx;
+  color: #444;
+}
+.sku-item-img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.sku-item-img image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.sku-item .sku-bottom {
+  display: flex;
+}
+.sku-item .sku-bottom > view {
+  /* margin-right: 15rpx; */
+  flex: 1;
+  text-align: center;
+}
+.sku-item .sku-bottom .time {
+  display: flex;
+  justify-content: center;
+}
+.sku-item .sku-bottom .browse {
+  display: flex;
+  justify-content: center;
+}
+.sku-item .sku-bottom .time image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  margin-top: 5rpx;
+}
+.sku-item .sku-bottom .browse image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+  margin-top: 2rpx;
+}
+.sku-item .sku-bottom .browse.pl image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+  margin-top: 6rpx;
+}
+.sku-item .sku-bottom .phone.browse image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  margin-top: 6rpx;
+}
+.sku-item .sku-bottom text {
+  font-size: 26rpx;
+  color: #999;
+}
+.no-data {
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 40%;
+  color: red;
+}

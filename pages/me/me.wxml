@@ -1,0 +1,45 @@
+<view class='me' wx:if="{{userInfo}}">
+  <view class='head-bg'>
+    <view class='head-portrait'>
+      <view class='head-img'>
+        <image src='{{userInfo.avatar_url}}'></image>
+      </view>
+      <view class='name-number'>
+        <view class='name'>{{userInfo.nick_name}}</view>
+        <view wx:if="{{userInfo.mobile}}" class='number' bindtap="bindNumber">{{userInfo.mobile}}</view>
+        <view wx:if="{{!userInfo.mobile}}" class='number' bindtap="bindNumber">请绑定手机号</view>
+      </view>
+      <view class='gender'>性别：{{userInfo.gender}}</view>
+    </view>
+  </view>
+  <view class="service">
+    <view class="title">个人服务</view>
+    <view class="class-box">
+      <view class="class-item">
+        <image mode='widthFix' src='../images/classactive.jpg'></image>
+        <view>我的发布</view>
+      </view>
+      <view class="class-item" bindtap="goOrder">
+        <image mode='widthFix' src='../images/jl.jpg'></image>
+        <view>订单</view>
+      </view>
+      <view class="class-item" bindtap="goComment">
+        <image mode='widthFix' src='../images/pl2.png'></image>
+        <view>评论</view>
+        <view wx:if="{{commentNumber>0}}" class="number">{{commentNumber}}</view>
+      </view>
+      <view class="class-item" bindtap="goCooperation">
+        <image mode='widthFix' src='../images/icon-test.png'></image>
+        <view>城市合伙人</view>
+      </view>
+      <view class="class-item">
+        <image mode='widthFix' src='../images/kfface.png'></image>
+        <view>客服</view>
+      </view>
+      <view class="class-item" wx:for="{{3}}" wx:key="{{index}}"></view>
+    </view>
+  </view>
+    <modal hidden="{{showNumber}}" title="请输入手机号" confirm-text="确定" cancel-text="取消" bindcancel="noNumber" bindconfirm="yesNumber">
+      <input bindinput="bindMobileNumber" type='text' cursor-spacing='{{space}}' focus="{{focusphone}}" placeholder="请输入手机号"/>
+    </modal>
+</view>

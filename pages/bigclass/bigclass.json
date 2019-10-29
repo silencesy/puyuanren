@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "article-item": "../../components/article_item/article_item",
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index"
+  }
+}

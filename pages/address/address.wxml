@@ -1,0 +1,50 @@
+<!--pages/address/address.wxml-->
+<view class='address-container'>
+  <view class='add-list'>
+    <view class='item' wx:for="{{addrData}}" wx:key="index">
+      <view class='address' 
+        data-id="{{item.id}}" 
+        data-default='{{item.is_default}}' 
+        data-contact='{{item.contact}}'
+        data-mobile='{{item.mobile}}'
+        data-address='{{item.address}}'
+         bindtap='chooseAddress'>
+        {{item.address}}
+      </view>
+      <view class='user-info'
+        data-id="{{item.id}}" 
+        data-default='{{item.is_default}}' 
+        data-contact='{{item.contact}}'
+        data-mobile='{{item.mobile}}'
+        data-address='{{item.address}}'
+         bindtap='chooseAddress'>
+        <view>{{item.contact}}</view>
+        <view class='mobile'>{{item.mobile}}</view>
+      </view>
+      <view class='bottom'>
+        <view class='left {{item.is_default == 1?"active":""}}' data-id="{{item.id}}" data-index="{{index}}" bindtap='bindSetDeafult'>
+            <view class='icon-danxuankuang-copy iconfont'></view>
+            <view>设置默认地址</view>
+        </view>
+        <view class='right'>
+          <view class='edit'  data-id="{{item.id}}" 
+                              data-default='{{item.is_default}}' 
+                              data-contact='{{item.contact}}'
+                              data-mobile='{{item.mobile}}'
+                              data-address='{{item.address}}'
+                              bindtap='bindEdit'>
+            <view class='iconfont icon-bianji'></view>
+            <view>编辑</view>
+          </view>
+          <view class='delete' data-id="{{item.id}}" data-index="{{index}}" bindtap='bindDelete'>
+            <view class='iconfont icon-shanchu'></view>
+            <view>删除</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='add-btn-box'>
+    <view class='add-btn' bindtap='goAddrFrom'>+添加新地址</view>
+  </view>
+</view>

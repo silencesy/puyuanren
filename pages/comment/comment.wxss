@@ -1,0 +1,40 @@
+page {
+  background-color: #eee;
+}
+.item-container {
+  padding: 20rpx;
+  display: flex;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
+.item-container image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.item-container .icon-no {
+  width: 50rpx;
+  height: 50rpx;
+  padding-top: 30rpx;
+  border-radius: 0;
+}
+.item-container text {
+  width: 530rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 100rpx;
+  display: block;
+  word-break:break-all;overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+
+}
+.no-comment {
+  text-align: center;
+  font-size: 28rpx;
+  padding: 40rpx;
+  color: #666;
+  padding-top: 30%;
+}

@@ -1,0 +1,18 @@
+<view class='home' wx:if="{{articleListData.length}}">
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    use-action-slot
+    bind:change="onChange"
+    bind:search="onSearch"
+    class="search-row"
+  >
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search>
+  <view class='tag'>
+    <text>热搜：</text> <text wx:for="{{swiperData}}" wx:key="{{index}}" data-id="{{item.advert_cates}}" bindtap='goclass'>{{item.title}}</text>
+  </view>
+  <view>
+    <article-item articleListData='{{articleListData}}'></article-item>
+  </view>
+</view>

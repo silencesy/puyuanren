@@ -1,0 +1,41 @@
+/* pages/releasecolumn/releasecolumn.wxss */
+.banner {
+  width: 100%;
+  height: 192rpx;
+  margin-top: 6rpx;
+}
+.left-container{
+	width:28vw;
+	height: 100vh;
+	background:#fff;
+  padding: 40rpx 15rpx;
+}
+.left-container .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #dfdfdf;
+  padding: 20rpx 0;
+}
+.left-container .item image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.left-container .item view {
+  color: #999;
+  font-size: 32rpx;
+  font-weight: 400;
+}
+.enter-into {
+  position: fixed;
+  left: 20rpx;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  margin: auto;
+  width: 56rpx;
+  height: 56rpx;
+}
+.activeClass view{
+  color: #f64000 !important;
+}

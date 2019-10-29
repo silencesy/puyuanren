@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/releasecolumn/releasecolumn",
+    "pages/home/home",
+    "pages/class/class",
+    "pages/deliverhome/deliverhome",
+    "pages/bigclass/bigclass",
+    "pages/details/details",
+    "pages/me/me",
+    "pages/bind/bind",
+    "pages/category/category",
+    "pages/comment/comment",
+    "pages/browse/browse",
+    "pages/release/release",
+    "pages/pay/pay",
+    "pages/paylist/paylist",
+    "pages/payedlist/payedlist",
+    "pages/address/address",
+    "pages/addressform/addressform",
+    "pages/orderconfim/orderconfim",
+    "pages/orderlist/orderlist",
+    "pages/orderlist/deliverhomeorderlist",
+    "pages/partner/partner"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ff6000",
+    "navigationBarTitleText": "濮院人",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "color": "#999999",
+    "selectedColor": "#ff6000",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "企业",
+        "iconPath": "./pages/images/home.jpg",
+        "selectedIconPath": "./pages/images/homeactive.jpg"
+      },
+      {
+        "pagePath": "pages/releasecolumn/releasecolumn",
+        "text": "最新信息",
+        "iconPath": "./pages/images/fb.jpg",
+        "selectedIconPath": "./pages/images/fbactive.jpg"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "推广",
+        "iconPath": "./pages/images/class.jpg",
+        "selectedIconPath": "./pages/images/classactive.jpg"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "./pages/images/me.jpg",
+        "selectedIconPath": "./pages/images/meactive.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,71 @@
+/* pages/release/release.wxss */
+.release-container .title {
+  text-align: center;
+  font-size: 32rpx;
+  padding-top: 20rpx;
+  padding-left: 15rpx;
+  color: #333;
+}
+page {
+  background: #eee;
+}
+.van-button--normal {
+  width: 300rpx;
+}
+.fb {
+  text-align: center;
+  padding: 30rpx 0;
+}
+.lxfb {
+  text-align: center;
+  padding: 0 0 40rpx 0;
+}
+.picker {
+  background: #fff;
+  padding:10px 15px;
+  color:#777;
+  font-size:28rpx;
+}
+.add {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+}
+.right {
+  width: 100%;
+  height: 100%;
+}
+.right image {
+  box-sizing: border-box;
+  width: 150rpx;
+  height: 150rpx;
+  border: 1rpx solid #eee;
+  float: left;
+  background-color: #fff;
+}
+/* .right image:nth-child(5n) {
+  border-right-width: 0;
+  margin-right: 0;
+} */
+.demand {
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 200rpx;
+  width: 100%;
+  font-size:28rpx;
+  padding:20rpx 30rpx;
+  border-radius: 16rpx;
+}
+.choose-img-box {
+  display: flex;
+}
+.item-img-box {
+  position: relative;
+}
+.delete-img {
+  position: absolute;
+  top:-24rpx;
+  right:-22rpx;
+  width: 50rpx;
+  height: 50rpx;
+}

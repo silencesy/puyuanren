@@ -1,0 +1,23 @@
+<view>
+  <article-item isShowBottom='{{isShowBottom}}'  articleListData='{{articleListData}}'></article-item>
+  <view wx:if="{{articleListData.length>0}}" class='pl' data-pid="0" data-name="评论" bindtap='showCommentFun'>
+    <text>添加评论</text>
+    <image src='../../pages/images/pl.png'></image>
+  </view>
+  <view wx:if="{{articleListData.length>0}}" class='comment-container'>
+    <view  wx:if="{{article_comment_list.length != 0}}" class='comment-item' wx:for="{{article_comment_list}}" wx:key="index" data-pid="{{item.id}}" data-name="{{item.nick_name}}" bindtap='showCommentFun'>
+      <image src='{{item.avatar_url}}'></image>
+      <view class='comment-content'>
+        <text class='name'>{{item.nick_name}}</text>
+        <view class='content'>{{item.content}}</view>
+        <view class='time'>{{item.create_time}} 回复</view>
+      </view>
+    </view>
+    <view class='no-comment' wx:if="{{article_comment_list.length == 0}}">-暂无评论-</view>
+  </view>
+  <view class='layer' bindtap="hideComment" wx:if="{{showComment}}"></view>
+  <view class='comment' wx:if="{{showComment}}">
+    <input confirm-type="search" type='text' cursor-spacing='10' focus="{{showComment}}" bindinput="searchInput" placeholder="{{name}}"/>
+    <text bindtap='searchTextFun'>{{btnText}}</text>
+  </view>
+</view>

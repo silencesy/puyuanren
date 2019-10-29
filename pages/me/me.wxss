@@ -1,0 +1,76 @@
+.head-bg {
+  background-color: #eee;
+  padding: 20rpx 0;
+  
+}
+.head-portrait {
+  background-color: #fff;
+  padding: 40rpx;
+  overflow: hidden;
+}
+.head-img {
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+}
+.head-img image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+}
+.name-number {
+  color: #444;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+  float: left;
+  padding-top: 12rpx;
+}
+.name-number .name {
+  font-size: 38rpx;
+}
+.name-number .number {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+.gender {
+  float: right;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #444;
+  font-size: 32rpx;
+}
+.service .title {
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.class-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 40rpx;
+  background-color: #fff;
+}
+.class-box .class-item {
+  width: 187rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.class-box .class-item image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.class-box .class-item view {
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+}
+.class-box .class-item .number {
+  position: absolute;
+  right: 30rpx;
+  top: -10rpx;
+  background-color: #ff6000;
+  padding: 0 10rpx;
+  color: #fff;
+  border-radius: 50%;
+}

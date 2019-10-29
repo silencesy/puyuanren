@@ -1,0 +1,36 @@
+<!--pages/payedlist/payedlist.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab
+    wx:for="{{title}}"
+    wx:key="index"
+    title="{{item}}"
+  >
+    <view class="content">
+      <view class='list'>
+        <view class='item' wx:if="{{payData.length>0}}" wx:for="{{payData}}" wx:key="{{index}}">
+          <view class='title'>
+            <view bindtap='layer'>{{item.pay_body}}</view>
+              <view>￥{{item.order_price}}</view>
+            </view>
+            <view class='content'>
+              <view class='info'>
+                {{item.article_content}}(联系电话：{{item.user_phone}})
+              </view>
+              <view class='img-box'>
+                <image src='{{item.img_src1}}' data-srcone="{{item.img_src1}}" bindtap='showBigImg'></image>
+                <image wx:if="{{item.img_src2}}" src='{{item.img_src2}}' data-srcone="{{item.img_src2}}" bindtap='showBigImg'></image>
+                <image wx:if="{{item.img_src3}}" src='{{item.img_src3}}' data-srcone="{{item.img_src3}}" bindtap='showBigImg'></image>
+              </view>
+              <view class='time'>
+                有效时间： {{item.start_date}} 到 {{item.end_date}} <button wx:if="{{showBuyBotton}}" data-id="{{item.id}}" data-articleid="{{item.article_id}}" bindtap='pay'>购买</button>
+              </view>
+              
+            </view>
+        </view>
+        <view class='no-data' wx:if="{{payData.length==0}}">
+          暂无数据
+        </view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

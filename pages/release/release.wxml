@@ -1,0 +1,50 @@
+<view class='release-container'>
+  <view class='title'>
+    亲，编辑好你的需求，要求，电话号码，发我便好。
+  </view>
+  <demo-block title="需求/要求">
+    <!-- <van-cell-group>
+      <van-field class="demand" value="{{ describe }}" placeholder="请输入你的需求/要求" border="{{ false }}" bind:input="describe" clearable />
+    </van-cell-group> -->
+    <textarea wx:if="{{!right}}" class='demand' maxlength="1000" value="{{ describe }}" bindinput="describe" placeholder="请输入你的需求/要求" placeholder-style="color:#888;"  />
+  </demo-block>
+  <!-- <demo-block title="分类">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{cateListData}}">
+        <view class="picker">
+          请选择分类：{{cateListData[index]}}
+        </view>
+    </picker>
+  </demo-block> -->
+  <demo-block title="电话号码">
+    <van-cell-group>
+      <van-field value="{{ phone }}" placeholder="请输入你的电话号码" border="{{ false }}" bind:input="phone" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="选择图片">
+    <view class='choose-img-box'>
+      <view class='item-img-box' wx:key="{{index}}" wx:for="{{images}}">
+        <image class='add' bindtap='showImg' src="{{item}}" ></image>
+        <image data-index='{{index}}' bindtap='deleteImg' class='delete-img' src='../images/guanbi.png'></image>
+      </view>
+      <view class='item-img-box' wx:if="{{images.length == 0 || imgType == 'diy' && images.length !=3}}">
+        <image class='add' bindtap='showImg' src='../images/sc.png'></image>
+      </view>
+    </view>
+  </demo-block>
+
+  <view class='fb'>
+  <van-button slot="button" size="normal" type="danger" custom-class="button" bind:click="submit">推广</van-button>
+  </view>
+  <view class='lxfb'>
+    <van-button slot="button" size="normal" type="danger" custom-class="button" bindtap='goPayList'>连续自动推广</van-button>
+  </view>
+  <van-popup
+    show="{{ right }}"
+    position="right"
+    custom-class="right"
+    bind:close="toggleRightPopup"
+  >
+  <image wx:for="{{articleImage}}" data-id="{{item.cate_id}}" data-src="{{item.img_src1}}" wx:key="{{index}}" src='{{item.img_src1}}' bindtap='chooseImg'></image>
+  <image wx:if="{{images.length<3}}" src='../images/add-img.png' bindtap='chooseImage'></image>
+  </van-popup>
+</view>

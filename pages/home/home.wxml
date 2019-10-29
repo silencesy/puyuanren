@@ -1,0 +1,33 @@
+<!--pages/releasecolumn/releasecolumn.wxml-->
+<view class='releasecolumn-container' wx:if="{{articleListData.length>0}}">
+  <!-- <view class='title'>
+    <image class='banner' src='../images/banner.jpg' mode="widthFix"></image>
+  </view> -->
+  <van-search
+    value="{{ value }}"
+    placeholder="请输入搜索关键词"
+    use-action-slot
+    bind:change="onChange"
+    bind:search="onSearch"
+    class="search-row"
+  >
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search>
+  <view class="swiper-box">
+    <swiper swiperData="{{swiper}}" />
+  </view>
+  <view class="class-box">
+    <view wx:for="{{cate_list}}" wx:key="{{index}}" class="class-item">
+      <image mode='widthFix' src='{{item.img_src}}'></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <view class="release-bar">- 实时信息发布栏 -</view>
+  <article-item articleListData='{{articleListData}}'></article-item>
+  <view class='customer'>
+    <view>
+      <image mode='widthFix' src='../images/kfface.png'></image>
+    </view>
+    <button class='customer-btn' open-type="contact"></button>
+  </view>
+</view>

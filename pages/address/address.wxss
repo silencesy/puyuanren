@@ -1,0 +1,83 @@
+/* pages/address/address.wxss */
+page {
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+.address-container {
+  padding-bottom: 100rpx;
+}
+.add-btn-box {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 20rpx;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+}
+.add-btn {
+  width: 100%;
+  height: 80rpx;
+  background: red;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+}
+.add-list .item {
+  padding: 20rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+}
+.add-list .item .address {
+  color: #222;
+  font-size: 32rpx;
+}
+.add-list .item .user-info {
+  display: flex;
+  color: #999;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+}
+
+.mobile {
+  margin-left: 10rpx;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5rpx;
+  font-size: 32rpx;
+  color: #444;
+}
+.bottom .left {
+  display: flex;
+  align-items: center;
+}
+.bottom .left.active {
+  color: red;
+}
+.bottom .left.active .iconfont {
+  color: red;
+}
+.bottom .right {
+  display: flex;
+  align-items: center;
+}
+.bottom .right > view {
+  display: flex;
+  align-items: center;
+}
+.iconfont { 
+  margin-right: 10rpx;
+  color: #999;
+}
+.icon-shanchu {
+  margin-left: 20rpx;
+}

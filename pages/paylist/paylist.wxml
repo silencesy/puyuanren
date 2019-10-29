@@ -1,0 +1,17 @@
+<!--pages/paylist/paylist.wxml-->
+<view class='pay-container'>
+  <view class='list'>
+    <view class='item' wx:for="{{payData}}" wx:key="{{index}}">
+      <view class='title'>
+        <view bindtap='layer'>{{item.title}}</view>
+        <view>￥{{item.money}}</view>
+      </view>
+      <view class='content'>
+        <view>
+          {{item.content}}
+        </view>
+        <button data-id="{{item.id}}" bindtap='pay'>购买</button>
+      </view>
+    </view>
+  </view>
+</view>

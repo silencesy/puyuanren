@@ -1,0 +1,26 @@
+<!--pages/releasecolumn/releasecolumn.wxml-->
+<view class='releasecolumn-container' wx:if="{{articleListData.length>0}}">
+  <i-drawer mode="left" visible="{{showLeft}}" bind:close="toggleLeft">
+    <view class="left-container">
+      <view class="item {{indexNumber==0?'activeClass':''}}" data-id="all" data-index="0" bindtap="chooseClass">
+        <image src="../images/fbactive.jpg"></image>
+        <view>所有</view>
+      </view>
+      <view class="item {{indexNumber==(index+1)?'activeClass':''}}" wx:for="{{cate_list}}" data-id="{{item.id}}" data-index="{{index+1}}" bindtap="chooseClass" wx:key="{{index+1}}">
+        <image src="{{item.img_src}}"></image>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+  </i-drawer>
+  <image class="banner" src="../images/banner.jpg"></image>
+  <article-item articleListData='{{articleListData}}'></article-item>
+  <view class='customer'>
+    <view>
+      <image mode='widthFix' src='../images/kfface.png'></image>
+    </view>
+    <button class='customer-btn' open-type="contact"></button>
+  </view>
+  <view bindtap="toggleLeft" class="enter-into">
+    <i-icon color="#f6b400" type="enterinto" size="40" />
+  </view>
+</view>

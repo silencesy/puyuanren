@@ -1,0 +1,208 @@
+/* pages/deliverhome/deliverhome.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.deliverhome-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.deliverhome-container .left {
+  height: 100%;
+  width: 180rpx;
+  background: #efefef;
+  color: #888;
+}
+.left-scroll {
+  height: 100%;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+.deliverhome-container .left view {
+  text-align: center;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  border-bottom:1px dashed #dfdfdf;
+}
+.deliverhome-container .left view.active {
+  background: #fff;
+  color: #222;
+}
+.deliverhome-container .left view text {
+  width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-left: 2px solid transparent;
+}
+.deliverhome-container .left view.active text {
+  border-left: 2px solid red;
+}
+.deliverhome-container .right {
+  height: 100%;
+  width: 570rpx;
+  /* background: blue; */
+  position: relative;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+.deliverhome-container .right-scroll {
+  height: 100%;
+} 
+.goods-item {
+  display: flex;
+  border-bottom:1px solid #f7f7f7;
+  height: 220rpx;
+}
+.goods-item image {
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 8rpx;
+}
+.goods-item .goods-info {
+  width: 400rpx;
+  padding: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: red; */
+}
+.goods-item .goods-info .name {
+  color: #222;
+  font-size: 34rpx;
+  margin: 10rpx 0 15rpx 0;
+}
+.goods-item .goods-info .price-count {
+  display: flex;
+  justify-content: space-between;
+}
+.goods-item .goods-info .price-count .price {
+  color: red;
+  font-size: 32rpx;
+  line-height: 30px;
+}
+.goods-item .goods-info .descript {
+  font-size: 32rpx;
+  color: #888;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
+}
+.choose {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  background-color: #ddd;
+  font-size: 30rpx;
+}
+.choose > view:first-child {
+  box-sizing: border-box;
+  padding-right: 20rpx;
+  display: flex;
+  align-items: center;
+  width: 600rpx;
+  justify-content: space-between;
+}
+.choose > view:first-child > view {
+  display: flex;
+  align-items: center;
+}
+
+.choose image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.choose .price-buy {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.price-buy view {
+  background-color: red;
+  color: #fff;
+  display: block;
+  height: 100rpx;
+  width: 150rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.class-title {
+  background-color: #f7f7f7;
+  padding:20rpx 25rpx;
+  color:#646464;
+  font-size:30rpx;
+}
+.layer-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.45);
+}
+.choose-goods-list {
+  position: fixed;
+  left: 0;
+  bottom: 100rpx;
+  min-height: 200rpx;
+  max-height: 600rpx;
+  width: 100%;
+  z-index: 200;
+  background-color: #fff;
+}
+.goods-list-scroll {
+  max-height: 500rpx;
+  background-color: #fff;
+}
+.choose-goods-list .title {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20rpx;
+  font-size: 32rpx;
+  color: #666;
+  background-color: #efefef;
+}
+.goods-list-scroll .item {
+  display: flex;
+  padding: 20rpx;
+  justify-content: space-between;
+}
+.goods-list-scroll .item .name {
+  width: 350rpx;
+  display:block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  color: #666;
+}
+.goods-list-scroll .item .count-price {
+  display: flex;
+  justify-content: flex-end;
+  width: 400rpx;
+}
+.goods-list-scroll .item .count-price .price {
+  margin-right: 20rpx;
+  color: red;
+}
+.choose .number {
+  color: #444;
+}
+.choose .totalPrice {
+  color: #444;
+}
+.totalPrice text {
+  color: red;
+}

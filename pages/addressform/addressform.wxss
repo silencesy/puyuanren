@@ -1,0 +1,47 @@
+/* pages/addressform/addressform.wxss */
+page {
+  background-color: #eee;
+}
+.demand {
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 200rpx;
+  width: 100%;
+  font-size:28rpx;
+  padding:20rpx 30rpx;
+}
+.default {
+  padding: 20rpx;
+}
+.default text {
+  color: #666;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  float: left;
+}
+.default .check-btn {
+  float: right;
+  margin-right: 20rpx;
+}
+.save-box {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 20rpx;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+}
+.save {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  border-radius: 40rpx;
+}

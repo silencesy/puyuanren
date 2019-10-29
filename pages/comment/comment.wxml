@@ -1,0 +1,18 @@
+<van-tabs active="" bind:change="onChange">
+  <van-tab
+    wx:for="{{title}}"
+    wx:key="index"
+    title="{{item}}"
+  >
+    <view class="content">
+      <view class='item-container' wx:if="{{commentList.length>0}}" data-id="{{item.article_id}}" wx:for="{{commentList}}" wx:key="index" bindtap='goDetails'>
+          <image src="{{item.avatar_url}}"></image>
+          <text>{{item.content}}</text>
+          <image class='icon-no' src='{{flag==0?"../images/yd.jpg":"../images/xx.jpg"}}'></image>
+      </view>
+      <view class='no-comment' wx:if="{{commentList.length==0}}">
+        暂无数据
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

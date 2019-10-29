@@ -1,0 +1,181 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.2",
+	"appid": "wx0bcb8da61b9cbdb2",
+	"projectname": "%E6%BF%AE%E9%99%A2%E4%BA%BA",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 20,
+			"list": [
+				{
+					"id": 0,
+					"name": "details",
+					"pathName": "pages/details/details",
+					"query": "id=1257"
+				},
+				{
+					"id": -1,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "comment",
+					"pathName": "pages/comment/comment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "browse",
+					"pathName": "pages/browse/browse",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "details",
+					"pathName": "pages/release/release",
+					"query": "id=1257"
+				},
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pay",
+					"pathName": "pages/pay/pay",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fabu",
+					"pathName": "pages/release/release",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "paylist",
+					"pathName": "pages/paylist/paylist",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "payed",
+					"pathName": "pages/payedlist/payedlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "payed",
+					"pathName": "pages/payedlist/payedlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "payedList",
+					"pathName": "pages/payedlist/payedlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bind",
+					"pathName": "pages/bind/bind",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fabulan",
+					"pathName": "pages/releasecolumn/releasecolumn",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bigclass",
+					"pathName": "pages/bigclass/bigclass",
+					"query": "id=39,40"
+				},
+				{
+					"id": 15,
+					"name": "送到家",
+					"pathName": "pages/deliverhome/deliverhome",
+					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "sedHome",
+					"pathName": "pages/deliverhome/deliverhome",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地址",
+					"pathName": "pages/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地址表单",
+					"pathName": "pages/addressform/addressform",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订到确认页",
+					"pathName": "pages/orderconfim/orderconfim",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "送到家订单",
+					"pathName": "pages/orderlist/orderlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜集城市合伙人",
+					"pathName": "pages/partner/partner",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

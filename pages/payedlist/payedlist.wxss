@@ -1,0 +1,68 @@
+/* pages/payedlist/payedlist.wxss */
+/* pages/paylist/paylist.wxss */
+page {
+  background-color: #eee;
+}
+
+.item {
+  box-sizing: border-box;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+}
+.item .title{
+  display: flex;
+  padding-bottom: 20rpx;
+}
+.item .title view {
+  flex: 1;
+}
+.item .title view:nth-child(1) {
+  text-align: left;
+  font-size: 32rpx;
+  color: #444;
+}
+.item .title view:nth-child(2) {
+  text-align: right;
+  font-size: 32rpx;
+  color: #e32561;
+}
+.item .content .info {
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+}
+.item .content .img-box {
+  display: flex;
+}
+.item .content image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+.item .content view {
+  flex: 1;
+  font-size: 28rpx;
+  color: #666;
+}
+.item .content .time {
+  padding: 20rpx 0;
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+}
+.item .content button {
+  border: none;
+  font-size: 28rpx;
+  background-color: #ff6000;
+  color: #fff;
+  float: right;
+  margin-top: -10rpx;
+}
+.no-data {
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  line-height: 80rpx;
+  margin-top: 40%;
+}

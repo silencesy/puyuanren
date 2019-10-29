@@ -1,0 +1,7 @@
+/* pages/browse/browse.wxss */
+.no-data {
+  text-align: center;
+  line-height: 80rpx;
+  color: #444;
+  font-size: 32rpx;
+}
