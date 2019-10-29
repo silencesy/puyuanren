@@ -5,10 +5,10 @@
   margin-top: 6rpx;
 }
 .left-container{
-	width:28vw;
+	width:30vw;
 	height: 100vh;
 	background:#fff;
-  padding: 40rpx 15rpx;
+  padding: 40rpx;
 }
 .left-container .item {
   display: flex;

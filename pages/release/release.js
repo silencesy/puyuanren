@@ -234,6 +234,10 @@ Page({
         describe: value.detail.value,
         phone: yse_phone[0]
       })
+    } else {
+      this.setData({
+        describe: value.detail.value
+      })
     }
       
   },

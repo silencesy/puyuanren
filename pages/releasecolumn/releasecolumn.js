@@ -32,6 +32,15 @@ Page({
       showLeft: false,
       indexNumber: index
     })
+    if (index == 0) {
+      wx.setNavigationBarTitle({
+        title: '濮院即时信息栏'
+      })
+    } else {
+      wx.setNavigationBarTitle({
+        title: this.data.cate_list[index-1].name
+      })
+    }
     wx.pageScrollTo({
       scrollTop: 0
     });
@@ -57,6 +66,11 @@ Page({
           totalPage: res.data.data.page_data.total_page,
           articleListData: flag ? res.data.data.article_list:that.data.articleListData.concat(res.data.data.article_list)
         });
+        if (that.data.getArticleListParam.cate_id == '' || that.data.getArticleListParam.cate_id == 'all') {
+          wx.setNavigationBarTitle({
+            title: '濮院即时信息栏'
+          })
+        }
       }, !flag);
     }
   },
