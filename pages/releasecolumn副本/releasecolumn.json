@@ -1,8 +1,0 @@
-{
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "article-item": "../../components/article_item/article_item",
-    "swiper": "../../components/swiper/swiper",
-    "van-search": "../../dist/search/index"
-  }
-}

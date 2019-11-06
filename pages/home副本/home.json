@@ -1,7 +1,0 @@
-{
-
-  "usingComponents": {
-    "van-search": "../../dist/search/index",
-    "article-item": "../../components/article_item/article_item"
-  }
-}
