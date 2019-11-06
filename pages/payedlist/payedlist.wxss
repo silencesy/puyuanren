@@ -8,8 +8,7 @@ page {
   box-sizing: border-box;
   padding: 20rpx;
   background-color: #fff;
-  margin-top: 20rpx;
-  border-radius: 16rpx;
+  border-top: 1rpx solid #dfdfdf;
 }
 .item .title{
   display: flex;

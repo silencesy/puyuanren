@@ -13,3 +13,12 @@
   color: #fff;
   width: 100%;
 }
+.license {
+  display: flex;
+  padding: 30rpx;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eee;
+}

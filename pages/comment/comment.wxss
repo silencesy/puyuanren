@@ -4,9 +4,8 @@ page {
 .item-container {
   padding: 20rpx;
   display: flex;
-  margin-top: 20rpx;
   background-color: #fff;
-  border-radius: 16rpx;
+  border-top: 1rpx solid #dfdfdf;
 }
 .item-container image {
   width: 100rpx;

@@ -1,0 +1,5 @@
+<!--pages/myrelease/myrelease.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="发布信息">123</van-tab>
+  <van-tab title="发布企业">456</van-tab>
+</van-tabs>

@@ -2,10 +2,6 @@
 var util = require('../../utils/util.js');
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     describe: '',
     phone: '',
@@ -13,45 +9,27 @@ Page({
     title: '濮院人',
     images: [],
     right: false,
-    imgType: 'sytstem'
-  },
+    imgType: 'sytstem',
+    active: 1,
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+    enterprise_name: '',
+    enterprise_culture: '',
+    enterprise_scale: '',
+    enterprise_desc: '',
+    enterprise_address: '',
+    enterprise_contact: '',
+    enterprise_mobile: '',
+    enterprise_demand: '',
+    img_src: ''
+  },
   onLoad: function (options) {
     this.getCateList();
     this.getdata();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
     this.setData({
       right: false
     });
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
   },
   getdata() {
     var that = this;
@@ -184,17 +162,9 @@ Page({
     })
     
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
   },
@@ -252,6 +222,34 @@ Page({
     iamgesCopy.splice(index,1);
     this.setData({
       images: iamgesCopy
+    })
+  },
+  chooseeEnterpriseImage() {
+    const that = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        wx.uploadFile({
+          url: 'https://www.keaiywl.com/puyuan/public/index.php/Index/Api/upload_file',
+          filePath: tempFilePaths[0],
+          name: 'img_src',
+          success(res) {
+            let img_src = JSON.parse(res.data).data;
+            that.setData({
+              img_src
+            })
+          }
+        })
+      }
+    })
+  },
+  deleteEnterpriseImg() {
+    this.setData({
+      img_src: ''
     })
   },
   chooseImg(e) {
@@ -371,5 +369,53 @@ Page({
       }
     }
    
-  }
+  },
+  onChange(event) {
+    // wx.showToast({
+    //   title: `切换到标签 ${event.detail.name}`,
+    //   icon: 'none'
+    // });
+  },
+
+  //企业信息输入
+  enterprise_name(value) {
+    this.setData({
+      enterprise_name: value.detail
+    })
+  },
+  enterprise_culture(value) {
+    this.setData({
+      enterprise_culture: value.detail
+    })
+  },
+  enterprise_scale(value) {
+    this.setData({
+      enterprise_scale: value.detail
+    })
+  },
+  enterprise_desc(value) {
+    this.setData({
+      enterprise_desc: value.detail
+    })
+  },
+  enterprise_address(value) {
+    this.setData({
+      enterprise_address: value.detail
+    })
+  },
+  enterprise_contact(value) {
+    this.setData({
+      enterprise_contact: value.detail
+    })
+  },
+  enterprise_mobile(value) {
+    this.setData({
+      enterprise_mobile: value.detail
+    })
+  },
+  enterprise_demand(value) {
+    this.setData({
+      enterprise_demand: value.detail
+    })
+  },
 })

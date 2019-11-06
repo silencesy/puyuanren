@@ -17,12 +17,15 @@
     <swiper swiperData="{{swiper}}" />
   </view>
   <view class="class-box">
-    <view wx:for="{{cate_list}}" wx:key="{{index}}" class="class-item">
+    <view wx:for="{{cate_list}}" data-id="{{item.id}}" bindtap="goListPage" wx:key="{{index}}" class="class-item">
       <image mode='widthFix' src='{{item.img_src}}'></image>
       <view>{{item.name}}</view>
     </view>
+    <view wx:for="{{5-cate_list.length%5}}" wx:key="{{index}}" class="class-item">
+
+    </view>
   </view>
-  <view class="release-bar">- 实时信息发布栏 -</view>
+  <view class="release-bar">- 濮院营业榜 -</view>
   <article-item articleListData='{{articleListData}}'></article-item>
   <view class='customer'>
     <view>

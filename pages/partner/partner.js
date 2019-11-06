@@ -1,4 +1,5 @@
 // pages/partner/partner.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -7,7 +8,8 @@ Page({
   data: {
     username: '',
     phone: '',
-    address: ''
+    address: '',
+    checked: false
   },
   changeusername({ detail}) {
     this.setData({
@@ -23,6 +25,10 @@ Page({
     this.setData({
       address: detail
     })
+  },
+  onChange({ detail }) {
+    // 需要手动对 checked 状态进行更新
+    this.setData({ checked: detail });
   },
   submitForm() {
     var that = this;
@@ -48,7 +54,22 @@ Page({
         mask: true
       });
     } else {
-      console.log('提交');
+      let params = {
+        name: that.data.username,
+        mobile: that.data.phone,
+        address: that.data.address,
+        has_license: that.data.checked
+      }
+
+      util.request('GET', 'add_my_partner', params, function (res) {
+        wx.showToast({
+          title: '提交成功，等待工作人员联系您！',
+          icon: 'none',
+          duration: 3000,
+          mask: true
+        })
+      });
+      console.log(params);
     }
   }
 })

@@ -1,0 +1,6 @@
+.no {
+  text-align: center;
+  font-size: 34rpx;
+  color: #888;
+  margin-top: 45%;
+}

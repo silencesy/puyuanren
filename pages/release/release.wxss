@@ -2,7 +2,7 @@
 .release-container .title {
   text-align: center;
   font-size: 32rpx;
-  padding-top: 20rpx;
+  padding-top: 32rpx;
   padding-left: 15rpx;
   color: #333;
 }
@@ -54,7 +54,6 @@ page {
   width: 100%;
   font-size:28rpx;
   padding:20rpx 30rpx;
-  border-radius: 16rpx;
 }
 .choose-img-box {
   display: flex;
@@ -68,4 +67,31 @@ page {
   right:-22rpx;
   width: 50rpx;
   height: 50rpx;
+}
+.qlfb {
+  padding: 30rpx 0;
+  text-align: center;
+}
+.lbfb {
+  padding-bottom: 30rpx;
+  text-align: center;
+}
+.van-tabs.van-tabs--line {
+  padding-top: 0;
+}
+.van-tabs .van-tabs__wrap {
+  position: relative;
+}
+.choose-img-box2 {
+  position: relative;
+  width: 100rpx;
+  height: 100rpx;
+}
+.delete-img2 {
+  position: absolute;
+  top:-24rpx;
+  right:-22rpx;
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 100;
 }

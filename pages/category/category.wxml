@@ -1,1 +1,4 @@
-<article-item articleListData='{{articleListData}}'></article-item>
+<view>
+  <article-item wx:if="{{articleListData.length!=0}}" articleListData='{{articleListData}}'></article-item>
+  <view class="no" wx:else >暂无数据</view>
+</view>

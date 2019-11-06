@@ -130,5 +130,10 @@ Page({
     wx.navigateTo({
       url: "../partner/partner"
     });
+  },
+  goMyRelease() {
+    wx.navigateTo({
+      url: "../myrelease/myrelease"
+    });
   }
 })

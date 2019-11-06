@@ -20,7 +20,8 @@
     "pages/orderconfim/orderconfim",
     "pages/orderlist/orderlist",
     "pages/orderlist/deliverhomeorderlist",
-    "pages/partner/partner"
+    "pages/partner/partner",
+    "pages/myrelease/myrelease"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -36,7 +37,7 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "企业",
+        "text": "濮院榜",
         "iconPath": "./pages/images/home.jpg",
         "selectedIconPath": "./pages/images/homeactive.jpg"
       },

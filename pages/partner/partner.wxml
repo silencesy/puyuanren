@@ -26,6 +26,10 @@
       placeholder="请输入代理地址"
     />
   </van-cell-group>
+  <view class="license">
+    <view>是否拥有营业执照</view>
+    <van-switch checked="{{ checked }}" bind:change="onChange" />
+  </view>
   <view class="btn">
     <button bindtap="submitForm">提交</button>
   </view>
