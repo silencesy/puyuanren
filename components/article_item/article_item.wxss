@@ -24,6 +24,14 @@
   box-sizing: content-box;
   width: 620rpx;
   padding-left: 10rpx;
+  position: relative;
+}
+.shanchu {
+  position: absolute;
+  right: 15rpx;
+  top: 0;
+  width: 50rpx;
+  height: 50rpx;
 }
 
 .sku-item .sku-item-info .sku-item-name {

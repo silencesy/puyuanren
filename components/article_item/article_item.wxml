@@ -5,6 +5,12 @@
       <image wx:else class='sku-item-img' src='../../pages/images/logo.jpg'></image>
     </view>
     <view class='sku-item-info'>
+      <image wx:if="{{isShowDelete}}" 
+        class='shanchu' src='../../pages/images/shanchu.png'
+        data-id='{{item.id}}'
+        data-index="{{index}}"
+        bindtap='deleteArticle'>
+      </image>
       <view class='sku-item-name' wx:if="{{item.nick_name}}" data-id="{{item.id}}" bindtap='goDetails'>{{item.nick_name}}</view>
       <view wx:else class='sku-item-name' data-id="{{item.id}}" bindtap='goDetails'>{{item.title}}</view>
       <view class='sku-item-content' data-id="{{item.id}}" bindtap='goDetails'>

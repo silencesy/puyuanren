@@ -54,6 +54,7 @@ page {
   width: 100%;
   font-size:28rpx;
   padding:20rpx 30rpx;
+  color: #777;
 }
 .choose-img-box {
   display: flex;

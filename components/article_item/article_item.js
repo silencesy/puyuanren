@@ -15,6 +15,10 @@ Component({
     isShowBottom: {
       type: Boolean,
       value: true
+    },
+    isShowDelete: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -85,6 +89,12 @@ Component({
         current: src, // 当前显示图片的http链接
         urls: [src] // 需要预览的图片http链接列表
       })
+    },
+    // 删除文章
+    deleteArticle(e) {
+      let id = e.currentTarget.dataset.id;
+      let index = e.currentTarget.dataset.index;
+      this.triggerEvent('myevent', {id,index})
     },
     // 进入文章详情
     goDetails(e) {

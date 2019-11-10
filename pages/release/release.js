@@ -418,4 +418,83 @@ Page({
       enterprise_demand: value.detail
     })
   },
+  // enterprise_name: '',
+  // enterprise_culture: '',
+  // enterprise_scale: '',
+  // enterprise_desc: '',
+  // enterprise_address: '',
+  // enterprise_contact: '',
+  // enterprise_mobile: '',
+  // enterprise_demand: '',
+  // img_src: ''
+  submit2(e) {
+    console.log(e);
+    var that = this;
+    if (!that.data.enterprise_name) {
+      wx.showToast({
+        title: '请填写企业名称！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (!that.data.enterprise_culture) {
+      wx.showToast({
+        title: '请填写企业文化！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (!that.data.enterprise_scale) {
+      wx.showToast({
+        title: '请填写企业规模！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (!that.data.enterprise_desc) {
+      wx.showToast({
+        title: '请填写企业简介！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (!that.data.enterprise_address) {
+      wx.showToast({
+        title: '请填写企业地址！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (!that.data.enterprise_contact) {
+      wx.showToast({
+        title: '请填写联系人！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (that.data.enterprise_mobile.length != 11) {
+      wx.showToast({
+        title: '请填写联系电话！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (!that.data.enterprise_demand) {
+      wx.showToast({
+        title: '请填写当下需求！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else if (!that.data.img_src) {
+      wx.showToast({
+        title: '请选择企业logo！',
+        icon: 'none',
+        duration: 1000,
+        mask: true
+      });
+    } else {
+      console.log(123);
+    }
+  }
 })

@@ -10,13 +10,11 @@ Page({
   data: {
     getArticleListParam: {
       page_num: 0,
-      page_size: 10,
-      cate_id: '',
-      cate_list: []
+      page_size: 10
     },
     totalPage: -1,
-    articleListData: [],
-    swiper: [{ "url": "http://mob.thmart.com.cn/GoodsDetails?id=1741", "pic": "http://api.mall.thatsmags.com/Public/ckfinder/images/banner/10/191012024025323818enbla5da13d194f14b.jpg" }, { "url": "http://mob.thmart.com.cn/GoodsDetails?id=1741", "pic": "http://api.mall.thatsmags.com/Public/ckfinder/images/banner/10/191012024025323818enbla5da13d194f14b.jpg" }]
+    companyListData: [],
+    swiper: []
   },
 
   /**
@@ -25,6 +23,17 @@ Page({
   onLoad: function (options) {
     this.getArticleList(false);
     this.getClass();
+    this.getSwiper();
+  },
+  getSwiper() {
+    var that = this;
+    util.request('GET', 'get_index_advert', {}, function (res) {
+      console.log(res);
+      let swiper_list = res.data.data;
+      that.setData({
+        swiper: swiper_list
+      })
+    });
   },
   getClass() {
     var that = this;
@@ -41,12 +50,13 @@ Page({
     var that = this;
     if (that.data.getArticleListParam.page_num != that.data.totalPage && that.data.totalPage != 0) {
       that.data.getArticleListParam.page_num++;
-      util.request('GET', 'get_article_list', that.data.getArticleListParam, function (res) {
+      util.request('GET', 'get_enterprise_list', that.data.getArticleListParam, function (res) {
         wx.hideNavigationBarLoading();
         wx.stopPullDownRefresh();
+        console.log(res);
         that.setData({
           totalPage: res.data.data.page_data.total_page,
-          articleListData: flag ? res.data.data.article_list : that.data.articleListData.concat(res.data.data.article_list)
+          companyListData: flag ? res.data.data.article_list : that.data.companyListData.concat(res.data.data.article_list)
         });
       }, !flag);
     }

@@ -1,0 +1,8 @@
+<!--components/company_item/company_item.wxml-->
+<view class='item' wx:for="{{companyListData}}" wx:key="{{index}}">
+  <image src="{{item.img_src}}"></image>
+  <view class='info'>
+    <view class='line2'>{{item.enterprise_name}}</view>
+    <view class='line3'>{{item.enterprise_desc}}</view>
+  </view>
+</view>

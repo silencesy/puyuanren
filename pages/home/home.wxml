@@ -1,5 +1,5 @@
 <!--pages/releasecolumn/releasecolumn.wxml-->
-<view class='releasecolumn-container' wx:if="{{articleListData.length>0}}">
+<view class='releasecolumn-container' wx:if="{{companyListData.length>0}}">
   <!-- <view class='title'>
     <image class='banner' src='../images/banner.jpg' mode="widthFix"></image>
   </view> -->
@@ -26,7 +26,7 @@
     </view>
   </view>
   <view class="release-bar">- 濮院营业榜 -</view>
-  <article-item articleListData='{{articleListData}}'></article-item>
+  <company_item companyListData="{{companyListData}}"></company_item>
   <view class='customer'>
     <view>
       <image mode='widthFix' src='../images/kfface.png'></image>
