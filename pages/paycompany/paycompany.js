@@ -12,8 +12,9 @@ Page({
   pay() {
     var that = this;
     console.log(that.data.companyData.is_advert);
+    console.log(Boolean(that.data.companyData.is_advert));
     let param = {
-      pay_item_id: that.data.companyData.is_advert?10:9,
+      pay_item_id: that.data.companyData.is_advert==='true'?10:9,
       need_fp: 0
     }
     util.request('GET', 'create_order', param, function (res) {
