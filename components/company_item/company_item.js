@@ -21,6 +21,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    goDetails(e) {
+      console.log(e);
+      let id = e.currentTarget.dataset.id;
+      wx.navigateTo({
+        url: "../../pages/companydetails/companydetails?id=" + id
+      });
+    }
 
   }
 })

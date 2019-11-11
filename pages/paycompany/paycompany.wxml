@@ -1,0 +1,30 @@
+<!--pages/paycompany/paycompany.wxml-->
+<view>
+  <view class="title">
+    {{companyData.enterprise_name}}
+  </view>
+  <view class="culture">
+    {{companyData.enterprise_culture}}
+  </view>
+  <view class="culture">
+    {{companyData.enterprise_scale}}
+  </view>
+  <view class="culture">
+    {{companyData.enterprise_desc}}
+  </view>
+  <view class="culture">
+    {{companyData.enterprise_address}}
+  </view>
+  <view class="culture">
+    {{companyData.enterprise_demand}}
+  </view>
+  <view class="culture">
+    {{companyData.enterprise_contact}}: {{companyData.enterprise_mobile}}
+  </view>
+
+
+  <view class="pay">
+    <button bindtap="pay">购买</button>
+  </view>
+</view>
+

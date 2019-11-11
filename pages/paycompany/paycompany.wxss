@@ -1,0 +1,25 @@
+/* pages/paycompany/paycompany.wxss */
+page {
+  padding: 20rpx;
+}
+.title {
+  font-weight: 700;
+}
+.culture {
+  color: #444;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.pay {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 50rpx;
+  text-align: center;
+}
+button {
+  width: 300rpx;
+  font-size: 28rpx;
+  background-color: #ff6000;
+  color: #fff;
+  box-sizing: border-box;
+}

@@ -428,8 +428,9 @@ Page({
   // enterprise_demand: '',
   // img_src: ''
   submit2(e) {
-    console.log(e);
+    
     var that = this;
+    let is_advert = e.currentTarget.dataset.flag;
     if (!that.data.enterprise_name) {
       wx.showToast({
         title: '请填写企业名称！',
@@ -494,7 +495,27 @@ Page({
         mask: true
       });
     } else {
-      console.log(123);
+      let isBindFlag = wx.getStorageSync('is_bind');
+      if (isBindFlag == 0) {
+        wx.navigateTo({
+          url: "../../pages/bind/bind?id=" + 'fb'
+        })
+      } else {
+        // enterprise_name: '',
+        // enterprise_culture: '',
+        // enterprise_scale: '',
+        // enterprise_desc: '',
+        // enterprise_address: '',
+        // enterprise_contact: '',
+        // enterprise_mobile: '',
+        // enterprise_demand: '',
+        // img_src: ''
+        let params = `?enterprise_name=${that.data.enterprise_name}&enterprise_culture=${that.data.enterprise_culture}&enterprise_scale=${that.data.enterprise_scale}&enterprise_desc=${that.data.enterprise_desc}&enterprise_address=${that.data.enterprise_address}&enterprise_contact=${that.data.enterprise_contact}&enterprise_mobile=${that.data.enterprise_mobile}&enterprise_demand=${that.data.enterprise_demand}&img_src=${that.data.img_src}&is_advert=${is_advert}`
+        console.log(params);
+        wx.navigateTo({
+          url: '../paycompany/paycompany' + params
+        })
+      }
     }
   }
 })

@@ -21,7 +21,9 @@
     "pages/orderlist/orderlist",
     "pages/orderlist/deliverhomeorderlist",
     "pages/partner/partner",
-    "pages/myrelease/myrelease"
+    "pages/myrelease/myrelease",
+    "pages/companydetails/companydetails",
+    "pages/paycompany/paycompany"
   ],
   "window": {
     "backgroundTextStyle": "dark",

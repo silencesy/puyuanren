@@ -92,10 +92,10 @@
         </view>
       </demo-block>
       <view class="qlfb">
-          <van-button slot="button" size="normal" type="danger" custom-class="button" data-flag='qy' bind:click="submit2">发布企业栏</van-button>
+          <van-button slot="button" size="normal" type="danger" custom-class="button" data-flag='false' bind:click="submit2">发布企业栏</van-button>
       </view>
       <view class="lbfb">
-          <van-button slot="button" size="normal" type="danger" custom-class="button" data-flag='lb' bind:click="submit2">发布轮播图</van-button>
+          <van-button slot="button" size="normal" type="danger" custom-class="button" data-flag='true' bind:click="submit2">发布轮播图</van-button>
       </view>
     </van-tab>
   </van-tabs>

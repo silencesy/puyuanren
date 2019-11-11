@@ -193,6 +193,21 @@
 					"id": -1,
 					"name": "我的发布",
 					"pathName": "pages/myrelease/myrelease",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "公司详情",
+					"pathName": "pages/companydetails/companydetails",
+					"query": "id=5",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "pages/paycompany/paycompany",
+					"pathName": "pages/paycompany/paycompany",
+					"query": "enterprise_name=上海合州&enterprise_culture=团结奋进&enterprise_scale=200-500人&enterprise_desc=20年英文杂志&enterprise_address=上海江宁路&enterprise_contact=孙&enterprise_mobile=18381302570&enterprise_demand=需要软件开发工程师1名&img_src=https://www.keaiywl.com//puyuan/public/static/upload/article//20191111/2019-11-11-17-47-37-167.jpg&is_advert=false",
 					"scene": null
 				}
 			]
