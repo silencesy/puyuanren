@@ -1,15 +1,27 @@
 /* pages/paycompany/paycompany.wxss */
 page {
   padding: 20rpx;
+  box-sizing: border-box;
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
 }
 .title {
-  font-weight: 700;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  width: 150rpx;
 }
-.culture {
-  color: #444;
-  margin-top: 20rpx;
+.info {
   font-size: 28rpx;
+  color: #666;
+  width: 560rpx;
+  word-break:break-all;
 }
+
 .pay {
   width: 100%;
   box-sizing: border-box;

@@ -25,7 +25,7 @@
 
     </view>
   </view>
-  <view class="release-bar">- 濮院营业榜 -</view>
+  <view class="release-bar">- 濮院企业栏 -</view>
   <company_item companyListData="{{companyListData}}"></company_item>
   <view class='customer'>
     <view>

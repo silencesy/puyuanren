@@ -35,6 +35,7 @@
       <view class="class-item">
         <image mode='widthFix' src='../images/yq.png'></image>
         <view>邀请好友</view>
+        <button class='customer-btn' open-type="share"></button>
       </view>
       <view class="class-item">
         <image mode='widthFix' src='../images/kfface.png'></image>

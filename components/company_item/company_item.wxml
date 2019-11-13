@@ -1,12 +1,36 @@
 <!--components/company_item/company_item.wxml-->
-<view class='item'
+<view
+  class="container"
   wx:for="{{companyListData}}"
-  bindtap="goDetails"
-  data-id="{{item.id}}"
-  wx:key="{{index}}">
-  <image src="{{item.img_src}}"></image>
-  <view class='info'>
-    <view class='line2'>{{item.enterprise_name}}</view>
-    <view class='line3'>{{item.enterprise_desc}}</view>
+  wx:key="{{index}}"
+  >
+  <view class='item'
+    bindtap="goDetails"
+    data-id="{{item.id}}"
+  >
+    <image src="{{item.img_src}}"></image>
+    <view class='info'>
+      <view class='line1'>{{item.enterprise_name}}</view>
+      <view class='line2'>{{item.enterprise_demand}}</view>
+      <view>{{item.enterprise_contact}}:{{item.enterprise_mobile}}</view>
+    </view>
+  </view>
+  <view class="bottom-row" wx:if="{{isShow}}">
+    <view
+      data-id='{{item.id}}'
+      data-index="{{index}}"
+      bindtap='editCompany'
+    >
+      <image src="../../pages/images/edit2.png"></image>
+      编辑
+    </view>
+    <view
+      data-id='{{item.id}}'
+      data-index="{{index}}"
+      bindtap='deleteCompany'
+    >
+      <image src="../../pages/images/delete2.png"></image>
+      删除
+    </view>
   </view>
 </view>

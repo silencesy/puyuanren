@@ -29,7 +29,6 @@ page {
 .add {
   width: 100rpx;
   height: 100rpx;
-  margin-left: 20rpx;
 }
 .right {
   width: 100%;

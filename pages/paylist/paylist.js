@@ -58,6 +58,7 @@ Page({
                 description: that.data.article.description,
                 user_phone: that.data.article.user_phone,
                 cate_id: that.data.article.cate_id,
+                hor_cate_id: that.data.article.hor_cate_id,
                 img_src1: that.data.article.img_src1,
                 img_src2: that.data.article.img_src2 || '',
                 img_src3: that.data.article.img_src3 || ''
@@ -85,6 +86,7 @@ Page({
                   description: that.data.article.description,
                   user_phone: that.data.article.user_phone,
                   cate_id: that.data.article.cate_id,
+                  hor_cate_id: that.data.article.hor_cate_id,
                   img_src1: that.data.article.img_src1,
                   img_src2: that.data.article.img_src2 || '',
                   img_src3: that.data.article.img_src3 || ''

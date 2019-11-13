@@ -6,12 +6,15 @@ Page({
     describe: '',
     phone: '',
     index: 0,
+    hor_cate_id: 0,
     title: '濮院人',
     images: [],
     right: false,
     imgType: 'sytstem',
-    active: 1,
-
+    active: 0,
+    cateListData: [],
+    cateListData2: [],
+    
     enterprise_name: '',
     enterprise_culture: '',
     enterprise_scale: '',
@@ -59,18 +62,16 @@ Page({
           duration: 1000,
           mask: true
         });
-      }
-      // else if (that.data.index == 0) {
-      //   wx.showToast({
-      //     title: '请选择分类！',
-      //     icon: 'none',
-      //     duration: 1000,
-      //     mask: true
-      //   });
-      // } 
-      else if (that.data.phone.length != 11) {
+      } else if (that.data.phone.length != 11) {
         wx.showToast({
           title: '请填正确手机号码！',
+          icon: 'none',
+          duration: 1000,
+          mask: true
+        });
+      } else if (that.data.hor_cate_id == 0) {
+        wx.showToast({
+          title: '请选择分类！',
           icon: 'none',
           duration: 1000,
           mask: true
@@ -88,12 +89,13 @@ Page({
           description: that.data.describe,
           user_phone: that.data.phone,
           cate_id: that.data.index,
+          hor_cate_id: that.data.cateListData2[that.data.hor_cate_id-1].id,
           img_src1: that.data.images[0],
           img_src2: that.data.images[1] || '',
           img_src3: that.data.images[2] || ''
         }
         wx.navigateTo({
-          url: "../../pages/paylist/paylist?title=" + param.title + '&description=' + param.description + '&user_phone=' + param.user_phone + '&cate_id=' + param.cate_id + '&img_src1=' + param.img_src1 + '&img_src2=' + param.img_src2 + '&img_src3=' + param.img_src3
+          url: "../../pages/paylist/paylist?title=" + param.title + '&description=' + param.description + '&user_phone=' + param.user_phone + '&cate_id=' + param.cate_id + '&hor_cate_id=' + param.hor_cate_id + '&img_src1=' + param.img_src1 + '&img_src2=' + param.img_src2 + '&img_src3=' + param.img_src3
         });
         setTimeout(function(){
           that.reset();
@@ -171,20 +173,22 @@ Page({
   // 获取分类数据
   getCateList: function () {
     var that = this;
-    util.request('GET', 'get_cate_list', that.data.getCateListParam, function (res) {
-      var lastData = res.data.data.cate_list;
+    util.request('GET', 'get_hor_cat_list', {}, function (res) {
+      console.log(res);
+      var lastData = res.data.data;
       var arr = [''];
       for (var i = 0; i < lastData.length; i++) {
         arr.push(lastData[i].name);
       }
       that.setData({
-        cateListData: arr
+        cateListData: arr,
+        cateListData2: lastData
       });
     });
   },
   bindPickerChange(e) {
     this.setData({
-      index: e.detail.value
+      hor_cate_id: e.detail.value
     });
   },
   checkPhone(text) {
@@ -308,18 +312,16 @@ Page({
           duration: 1000,
           mask: true
         });
-      } 
-      // else if (that.data.index == 0) {
-      //   wx.showToast({
-      //     title: '请选择分类！',
-      //     icon: 'none',
-      //     duration: 1000,
-      //     mask: true
-      //   });
-      // } 
-      else if (that.data.phone.length != 11) {
+      } else if (that.data.phone.length != 11) {
         wx.showToast({
           title: '请填正确手机号码！',
+          icon: 'none',
+          duration: 1000,
+          mask: true
+        });
+      } else if (that.data.hor_cate_id == 0) {
+        wx.showToast({
+          title: '请选择分类！',
           icon: 'none',
           duration: 1000,
           mask: true
@@ -337,10 +339,12 @@ Page({
           description: that.data.describe,
           user_phone: that.data.phone,
           cate_id: that.data.index,
+          hor_cate_id: that.data.cateListData2[that.data.hor_cate_id - 1].id,
           img_src1: that.data.images[0],
           img_src2: that.data.images[1] || '',
           img_src3: that.data.images[2] || ''
         }
+        console.log(param);
         util.request('GET', 'add_user_article', param, function (res) {
           console.log(res);
           if(res.data.status == -2) {

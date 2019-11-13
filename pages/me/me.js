@@ -27,6 +27,19 @@ Page({
     this.getuserData();
     this.getCommentNumber();
   },
+  onShareAppMessage: function (e) {
+    return {
+      title: '濮院人',
+      path: 'pages/releasecolumn/releasecolumn',
+      imageUrl: "../images/share.jpg",
+      success: (res) => {
+        console.log("转发成功", res);
+      },
+      fail: (res) => {
+        console.log("转发失败", res);
+      }
+    }
+  },
   getCommentNumber() {
     var that = this;
     util.request('GET', 'get_user_no_read_comment_num', {}, function (res) {

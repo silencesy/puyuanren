@@ -6,7 +6,7 @@
     </view>
     <view class='sku-item-info'>
       <image wx:if="{{isShowDelete}}" 
-        class='shanchu' src='../../pages/images/shanchu.png'
+        class='shanchu' src='../../pages/images/delete2.png'
         data-id='{{item.id}}'
         data-index="{{index}}"
         bindtap='deleteArticle'>

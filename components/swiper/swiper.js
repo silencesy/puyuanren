@@ -35,8 +35,17 @@ Component({
       })
     },
     goDetails(e) {
-      let { currentTarget: { dataset: { flag } } } = e;
-      
+      console.log(123);
+      let { currentTarget: { dataset: { flag,id } } } = e;
+      if (flag==1) {
+        wx.navigateTo({
+          url: "../../pages/details/details?id=" + id
+        });
+      } else if (flag == 2 ) {
+        wx.navigateTo({
+          url: "../../pages/companydetails/companydetails?id=" + id
+        });
+      }
     }
   }
 })

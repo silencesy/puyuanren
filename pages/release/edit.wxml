@@ -1,0 +1,55 @@
+<!--pages/release/edit.wxml-->
+<view>
+  <demo-block title="企业名称">
+    <van-cell-group>
+      <van-field value="{{ enterprise_name }}" placeholder="请输入企业名称" border="{{ false }}" bind:input="enterprise_name" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="企业文化">
+    <van-cell-group>
+      <van-field value="{{ enterprise_culture }}" placeholder="请输入企业文化" border="{{ false }}" bind:input="enterprise_culture" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="企业规模">
+    <van-cell-group>
+      <van-field value="{{ enterprise_scale }}" placeholder="请输入企业规模" border="{{ false }}" bind:input="enterprise_scale" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="企业简介">
+    <van-cell-group>
+      <van-field value="{{ enterprise_desc }}" placeholder="请输入企业简介" border="{{ false }}" bind:input="enterprise_desc" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="企业地址">
+    <van-cell-group>
+      <van-field value="{{ enterprise_address }}" placeholder="请输入企业地址" border="{{ false }}" bind:input="enterprise_address" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="联系人">
+    <van-cell-group>
+      <van-field value="{{ enterprise_contact }}" placeholder="联系人" border="{{ false }}" bind:input="enterprise_contact" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="联系电话">
+    <van-cell-group>
+      <van-field value="{{ enterprise_mobile }}" placeholder="请输入联系电话" border="{{ false }}" bind:input="enterprise_mobile" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="当下需求(例如招聘、招商、转让。)">
+    <van-cell-group>
+      <van-field value="{{ enterprise_demand }}" placeholder="请输入当下需求" border="{{ false }}" bind:input="enterprise_demand" clearable />
+    </van-cell-group>
+  </demo-block>
+  <demo-block title="企业logo(请提供正方形logo)">
+    <view class='choose-img-box' wx:if="{{!img_src}}">
+      <image bindtap='chooseeEnterpriseImage' class='add' src='../images/sc.png'></image>
+    </view>
+    <view class='choose-img-box choose-img-box2' wx:else>
+      <image class='add' bindtap='chooseeEnterpriseImage' src='{{img_src}}'></image>
+      <image bindtap='deleteEnterpriseImg' class='delete-img2' src='../images/guanbi.png'></image>
+    </view>
+  </demo-block>
+  <view class="qlfb">
+      <van-button slot="button" size="normal" type="danger" custom-class="button" data-flag='false' bind:click="submit2">保存</van-button>
+  </view>
+</view>

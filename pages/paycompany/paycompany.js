@@ -30,6 +30,22 @@ Page({
             'signType': payParam.signType,
             'paySign': payParam.paySign,
             'success': function (res) {
+              let params = that.data.companyData;
+              params.order_id = order_id;
+              util.request('GET', 'query_pay_enterprise_result', params,function(res){
+                var tip = res.data.message;
+                wx.showToast({
+                  title: tip,
+                  icon: 'none',
+                  duration: 3000,
+                  mask: true,
+                  success: function() {
+                    wx.navigateTo({
+                      url: "../../pages/payedlist/payedlist?id=1"
+                    });
+                  }
+                })
+              })
               // util.request('GET', 'query_pay_result',
               //   {
               //     order_id: order_id,
@@ -57,6 +73,23 @@ Page({
               //   });
             },
             'fail': function (res) {
+              
+              let params = that.data.companyData;
+              params.order_id = order_id;
+              util.request('GET', 'query_pay_enterprise_result', params, function (res) {
+                var tip = res.data.message;
+                wx.showToast({
+                  title: tip,
+                  icon: 'none',
+                  duration: 3000,
+                  mask: true,
+                  success: function() {
+                    wx.navigateTo({
+                      url: "../../pages/payedlist/payedlist?id=0"
+                    });
+                  }
+                })
+              })
               // util.request('GET', 'query_pay_result',
               //   {
               //     order_id: order_id,

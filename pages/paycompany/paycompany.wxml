@@ -1,27 +1,35 @@
 <!--pages/paycompany/paycompany.wxml-->
 <view>
-  <view class="title">
-    {{companyData.enterprise_name}}
+  <view class="item">
+    <view class="title">企业名称：</view>
+    <view class="info">
+      {{companyData.enterprise_name}}
+    </view>
   </view>
-  <view class="culture">
-    {{companyData.enterprise_culture}}
+  <view class="item">
+    <view class="title">企业文化：</view>
+    <view class="info">{{companyData.enterprise_culture}}</view>
   </view>
-  <view class="culture">
-    {{companyData.enterprise_scale}}
+  <view class="item">
+    <view class="title">企业规模：</view>
+    <view class="info">{{companyData.enterprise_scale}}</view>
   </view>
-  <view class="culture">
-    {{companyData.enterprise_desc}}
+  <view class="item">
+    <view class="title">企业简介：</view>
+    <view class="info">{{companyData.enterprise_desc}}</view>
   </view>
-  <view class="culture">
-    {{companyData.enterprise_address}}
+   <view class="item">
+    <view class="title">企业需求：</view>
+    <view class="info">{{companyData.enterprise_demand}}</view>
   </view>
-  <view class="culture">
-    {{companyData.enterprise_demand}}
+  <view class="item">
+    <view class="title">企业地址：</view>
+    <view class="info">{{companyData.enterprise_address}}</view>
   </view>
-  <view class="culture">
-    {{companyData.enterprise_contact}}: {{companyData.enterprise_mobile}}
+  <view class="item">
+    <view class="title">企业联系：</view>
+    <view class="info">{{companyData.enterprise_contact}}: {{companyData.enterprise_mobile}}</view>
   </view>
-
 
   <view class="pay">
     <button bindtap="pay">购买</button>

@@ -30,8 +30,8 @@
   position: absolute;
   right: 15rpx;
   top: 0;
-  width: 50rpx;
-  height: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 
 .sku-item .sku-item-info .sku-item-name {

@@ -21,7 +21,7 @@
                 <image wx:if="{{item.img_src2}}" src='{{item.img_src2}}' data-srcone="{{item.img_src2}}" bindtap='showBigImg'></image>
                 <image wx:if="{{item.img_src3}}" src='{{item.img_src3}}' data-srcone="{{item.img_src3}}" bindtap='showBigImg'></image>
               </view>
-              <view class='time'>
+              <view class='time' wx-if="{{item.type == 1}}">
                 有效时间： {{item.start_date}} 到 {{item.end_date}} <button wx:if="{{showBuyBotton}}" data-id="{{item.id}}" data-articleid="{{item.article_id}}" bindtap='pay'>购买</button>
               </view>
               

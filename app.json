@@ -23,7 +23,8 @@
     "pages/partner/partner",
     "pages/myrelease/myrelease",
     "pages/companydetails/companydetails",
-    "pages/paycompany/paycompany"
+    "pages/paycompany/paycompany",
+    "pages/release/edit"
   ],
   "window": {
     "backgroundTextStyle": "dark",

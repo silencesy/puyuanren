@@ -3,6 +3,7 @@
     "van-tab": "../../dist/tab/index",
     "van-tabs": "../../dist/tabs/index",
     "article-item": "../../components/article_item/article_item",
+    "company_item": "../../components/company_item/company_item",
     "van-dialog": "../../dist/dialog/index"
   }
 }

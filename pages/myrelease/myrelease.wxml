@@ -1,30 +1,23 @@
 <!--pages/myrelease/myrelease.wxml-->
-<van-tabs active="{{ active }}" bind:change="onChange">
-  <van-tab title="发布信息">
-      <article-item 
-        wx:if="{{articleListData.length!=0}}"
-        isShowDelete="{{true}}"
-        bind:myevent="deleteArticle"
-        articleListData='{{articleListData}}'>
-      </article-item>
-      
-  <view class="no" wx:else >暂无数据</view>
+<view>
+  <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="发布信息">
+        <article-item 
+          wx:if="{{articleListData.length!=0}}"
+          isShowDelete="{{true}}"
+          bind:myevent="deleteArticle"
+          articleListData='{{articleListData}}'>
+        </article-item>
+        <view class="no" wx:else >暂无数据</view>
+    
+    </van-tab>
+    <van-tab title="发布企业">
+      <company_item 
+        companyListData="{{companyListData}}" 
+        isShow="{{true}}" 
+        bind:deleteCompany="deleteCompany">
+      </company_item>
+    </van-tab>
+  </van-tabs>
   <van-dialog id="van-dialog" />
-  <!-- <article-item 
-        wx:if="{{articleListData.length!=0}}"
-        isShowDelete="{{true}}"
-        articleListData='{{articleListData}}'>
-      </article-item>
-      <article-item 
-        wx:if="{{articleListData.length!=0}}"
-        isShowDelete="{{true}}"
-        articleListData='{{articleListData}}'>
-      </article-item>
-      <article-item 
-        wx:if="{{articleListData.length!=0}}"
-        isShowDelete="{{true}}"
-        articleListData='{{articleListData}}'>
-      </article-item> -->
-  </van-tab>
-  <van-tab title="发布企业">456</van-tab>
-</van-tabs>
+</view>

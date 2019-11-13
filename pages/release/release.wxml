@@ -18,7 +18,7 @@
       <demo-block title="分类">
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{cateListData}}">
             <view class="picker">
-              请选择分类：{{cateListData[index]}}
+              请选择分类：{{cateListData[hor_cate_id]}}
             </view>
         </picker>
       </demo-block>
@@ -82,12 +82,12 @@
           <van-field value="{{ enterprise_demand }}" placeholder="请输入当下需求" border="{{ false }}" bind:input="enterprise_demand" clearable />
         </van-cell-group>
       </demo-block>
-      <demo-block title="企业logo">
+      <demo-block title="企业logo(请提供正方形logo)">
         <view class='choose-img-box' wx:if="{{!img_src}}">
           <image bindtap='chooseeEnterpriseImage' class='add' src='../images/sc.png'></image>
         </view>
         <view class='choose-img-box choose-img-box2' wx:else>
-          <image class='add' bindtap='chooseeEnterpriseImage' src='{{img_src}}'></image>
+          <image mode="widthfix" class='add' bindtap='chooseeEnterpriseImage' src='{{img_src}}'></image>
           <image bindtap='deleteEnterpriseImg' class='delete-img2' src='../images/guanbi.png'></image>
         </view>
       </demo-block>
