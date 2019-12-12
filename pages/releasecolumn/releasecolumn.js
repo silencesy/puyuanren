@@ -19,11 +19,6 @@ Page({
     this.getArticleList(false);
     this.getClass();
   },
-  toggleLeft() {
-    this.setData({
-      showLeft: !this.data.showLeft
-    });
-  },
   chooseClass(e) {
     let id = e.currentTarget.dataset.id;
     let index = e.currentTarget.dataset.index;
@@ -100,6 +95,23 @@ Page({
       getArticleListParam: param
     })
     this.getArticleList(true);
+  },
+  show() {
+    this.setData({
+      showLeft: !this.data.showLeft
+    });
+  },
+  onChange(e) {
+    this.setData({
+      value: e.detail
+    });
+  },
+  onSearch(event) {
+    if (this.data.value) {
+      wx.navigateTo({
+        url: "../../pages/browse/browse?id=" + this.data.value
+      });
+    }
   },
   onReachBottom: function () {
     this.getArticleList();

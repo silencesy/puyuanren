@@ -42,7 +42,6 @@
         <view>客服</view>
         <button class='customer-btn' open-type="contact"></button>
       </view>
-      <view class="class-item" wx:for="{{3}}" wx:key="{{index}}"></view>
     </view>
   </view>
     <modal hidden="{{showNumber}}" title="请输入手机号" confirm-text="确定" cancel-text="取消" bindcancel="noNumber" bindconfirm="yesNumber">

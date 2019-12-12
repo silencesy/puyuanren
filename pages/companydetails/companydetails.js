@@ -80,5 +80,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  call({ currentTarget: { dataset: { phone }}}) {
+    wx.makePhoneCall({
+      phoneNumber: phone
+    })
   }
 })

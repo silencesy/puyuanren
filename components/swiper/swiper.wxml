@@ -9,7 +9,7 @@
   bindchange="swiperChange" class='swiper'>
     <block wx:for="{{swiperData}}" wx:key="{{index}}">
       <swiper-item>
-        <image data-flag="{{item.type}}" data-id="{{item.id}}" bindtap="goDetails" src="{{item.img_src1}}" mode="aspectFill" class="slide-image"/>
+        <image data-flag="{{item.type}}" data-id="{{item.id}}" bindtap="goDetails" src="{{item.img_src1}}" mode="aspectFit" class="slide-image"/>
       </swiper-item>
     </block>
   </swiper>

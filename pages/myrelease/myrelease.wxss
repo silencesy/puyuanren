@@ -1,1 +1,7 @@
 /* pages/myrelease/myrelease.wxss */
+.no {
+  text-align: center;
+  margin-top: 30%;
+  color: #aaa;
+  font-size: 28rpx;
+}

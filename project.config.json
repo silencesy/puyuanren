@@ -197,10 +197,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 25,
 					"name": "公司详情",
 					"pathName": "pages/companydetails/companydetails",
-					"query": "id=5",
+					"query": "id= 38",
 					"scene": null
 				},
 				{

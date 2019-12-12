@@ -1,5 +1,8 @@
 <!--pages/companydetails/companydetails.wxml-->
-<view>
+<view wx:if="{{companyData}}">
+  <view class="img-box">
+      <image mode="widthFix" src="{{companyData.img_src}}"></image>
+  </view>
   <view class="item">
     <view class="title">企业名称：</view>
     <view class="info">
@@ -29,5 +32,11 @@
   <view class="item">
     <view class="title">企业联系：</view>
     <view class="info">{{companyData.enterprise_contact}}: {{companyData.enterprise_mobile}}</view>
+  </view>
+  <view class="phone" data-phone="{{companyData.enterprise_mobile}}" bindtap="call">
+    <view>
+      <image src='../../pages/images/dh.jpg'></image>
+      <text>拨打电话</text>
+    </view>
   </view>
 </view>

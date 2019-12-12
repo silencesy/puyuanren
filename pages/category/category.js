@@ -8,7 +8,7 @@ Page({
     param: {
       page_num: 0,
       page_size: 10,
-      cate_id: 0
+      hor_cate_id: 0
     },
     articleListData: [],
     totalPage: -1

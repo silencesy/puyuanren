@@ -47,14 +47,25 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-top: 40rpx;
   background-color: #fff;
 }
 .class-box .class-item {
-  width: 187rpx;
+  box-sizing: border-box;
+  width: 250rpx;
   text-align: center;
-  margin-bottom: 30rpx;
+  padding: 30rpx 0;
   position: relative;
+}
+.class-box .class-item:nth-child(1n) {
+  border-right: 1rpx solid #dfdfdf;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.class-box .class-item:nth-child(2n) {
+  border-right: 1rpx solid #dfdfdf;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+.class-box .class-item:nth-child(3n) {
+  border-bottom: 1rpx solid #dfdfdf;
 }
 .class-box .class-item image {
   width: 70rpx;

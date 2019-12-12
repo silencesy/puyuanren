@@ -1,6 +1,6 @@
 <!--pages/releasecolumn/releasecolumn.wxml-->
 <view class='releasecolumn-container' wx:if="{{articleListData.length>0}}">
-  <i-drawer mode="left" visible="{{showLeft}}" bind:close="toggleLeft">
+  <i-drawer mode="left" visible="{{showLeft}}" bind:close="show">
     <view class="left-container">
       <view class="item {{indexNumber==0?'activeClass':''}}" data-id="all" data-index="0" bindtap="chooseClass">
         <image src="../images/fbactive.jpg"></image>
@@ -12,7 +12,20 @@
       </view>
     </view>
   </i-drawer>
-  <image class="banner" src="../images/banner.jpg"></image>
+  <view class="search">
+    <van-search
+      value="{{ value }}"
+      placeholder="请输入搜索关键词"
+      use-action-slot
+      bind:change="onChange"
+      bind:search="onSearch"
+      bind:show="show"
+      class="search-row"
+    >
+      <view slot="action" bind:tap="onSearch">搜索</view>
+    </van-search>
+  </view> 
+  <!-- <image class="banner" src="../images/banner.jpg"></image> -->
   <article-item articleListData='{{articleListData}}'></article-item>
   <view class='customer'>
     <view>
@@ -20,7 +33,7 @@
     </view>
     <button class='customer-btn' open-type="contact"></button>
   </view>
-  <view bindtap="toggleLeft" class="enter-into">
+  <!-- <view bindtap="toggleLeft" class="enter-into">
     <i-icon color="#f6b400" type="enterinto" size="40" />
-  </view>
+  </view> -->
 </view>

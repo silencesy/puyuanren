@@ -399,7 +399,7 @@ Page({
   },
   enterprise_desc(value) {
     this.setData({
-      enterprise_desc: value.detail
+      enterprise_desc: value.detail.value
     })
   },
   enterprise_address(value) {
@@ -419,7 +419,7 @@ Page({
   },
   enterprise_demand(value) {
     this.setData({
-      enterprise_demand: value.detail
+      enterprise_demand: value.detail.value
     })
   },
   // enterprise_name: '',

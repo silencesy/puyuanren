@@ -8,15 +8,16 @@
           bind:myevent="deleteArticle"
           articleListData='{{articleListData}}'>
         </article-item>
-        <view class="no" wx:else >暂无数据</view>
-    
+        <view class="no" wx:else>暂无数据</view>
     </van-tab>
     <van-tab title="发布企业">
       <company_item 
+        wx:if="{{companyListData.length!=0}}"
         companyListData="{{companyListData}}" 
         isShow="{{true}}" 
         bind:deleteCompany="deleteCompany">
       </company_item>
+      <view class="no" wx:else>暂无数据</view>
     </van-tab>
   </van-tabs>
   <van-dialog id="van-dialog" />

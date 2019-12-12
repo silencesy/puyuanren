@@ -46,20 +46,27 @@ page {
   border-right-width: 0;
   margin-right: 0;
 } */
+.demand2 {
+  margin: 20rpx 0;
+}
 .demand {
   box-sizing: border-box;
   background-color: #fff;
   height: 200rpx;
   width: 100%;
   font-size:28rpx;
-  padding:20rpx 30rpx;
+  padding:20rpx 20rpx;
   color: #777;
 }
 .choose-img-box {
   display: flex;
+  padding-left: 20rpx;
 }
 .item-img-box {
   position: relative;
+}
+.item-img-box image {
+  margin-right: 24rpx;
 }
 .delete-img {
   position: absolute;
@@ -69,8 +76,9 @@ page {
   height: 50rpx;
 }
 .qlfb {
-  padding: 30rpx 0;
-  text-align: center;
+  padding: 30rpx 15rpx;
+  display: flex;
+  justify-content: space-around;
 }
 .lbfb {
   padding-bottom: 30rpx;
@@ -94,4 +102,11 @@ page {
   width: 50rpx;
   height: 50rpx;
   z-index: 100;
+}
+
+.choose-picker {
+  margin-top: 20rpx;
+}
+.qy-item {
+  margin-top: 20rpx;
 }

@@ -3,6 +3,8 @@
   "usingComponents": {
     "article-item": "../../components/article_item/article_item",
     "i-drawer": "../../iview/drawer/index",
-    "i-icon": "../../iview/icon/index"
+    "i-icon": "../../iview/icon/index",
+    "van-search": "../../dist/search2/index",
+    "van-icon": "../../dist/icon/index"
   }
 }

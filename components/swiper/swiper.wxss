@@ -2,6 +2,7 @@
 /* 轮播图 */
 .swiper-container {
   position: relative;
+  background-color: #fff;
 }
 .swiper-container swiper {
   height: 300rpx;
